@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane layoutX="516.0" prefHeight="433.0" prefWidth="415.0" style="-fx-background-color: #4B475C;"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="source.opensslcretificatejavafx.controllers.UserController">
+    <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="104.0" text="User"
+           textAlignment="CENTER" textFill="#0099ffa1">
+        <font>
+            <Font name="System Bold" size="25.0"/>
+        </font>
+        <graphic>
+            <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../png/user-solid.png"/>
+            </ImageView>
+        </graphic>
+    </Label>
+    <TextField fx:id="countryCode" layoutX="14.0" layoutY="85.0" promptText="Country code"/>
+    <TextField fx:id="region" layoutX="14.0" layoutY="118.0" promptText="Region"/>
+    <TextField fx:id="city" layoutX="14.0" layoutY="152.0" promptText="City"/>
+    <TextField fx:id="organization" layoutX="14.0" layoutY="184.0" promptText="Organization"/>
+    <TextField fx:id="department" layoutX="14.0" layoutY="216.0" promptText="Department "/>
+    <TextField fx:id="username" layoutX="14.0" layoutY="251.0" promptText="Username "/>
+    <TextField fx:id="email" layoutX="14.0" layoutY="283.0" promptText="Email "/>
+    <Button alignment="BOTTOM_LEFT" layoutX="205.0" layoutY="84.0" mnemonicParsing="false" onAction="#selectPrivateKey"
+            prefHeight="28.0" prefWidth="196.0" text="Select Admin Key">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+    <Button layoutX="205.0" layoutY="129.0" mnemonicParsing="false" onAction="#selectCertificate" prefHeight="28.0"
+            prefWidth="196.0" text="Select Admin Certificate">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+    <Button alignment="TOP_LEFT" layoutX="14.0" layoutY="321.0" mnemonicParsing="false" onAction="#createCertificate"
+            prefHeight="28.0" prefWidth="177.0" text="Issue User Certificate">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0"
+            prefWidth="928.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="source.opensslcretificatejavafx.controllers.SettingsController">
+    <AnchorPane prefHeight="435.0" prefWidth="217.0" style="-fx-background-color: #000000\;">
+        <Label alignment="CENTER" layoutX="12.0" layoutY="14.0" prefHeight="40.0" prefWidth="169.0" text="SETTINGS"
+               textAlignment="CENTER" textFill="#0099ffa1">
+            <font>
+                <Font name="System Bold" size="25.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../png/gear-solid.png"/>
+                </ImageView>
+            </graphic>
+        </Label>
+        <Label layoutX="14.0" layoutY="68.0" prefHeight="25.0" prefWidth="130.0" text="PK Algorithm"
+               textAlignment="CENTER" textFill="#5f7900a1">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Label>
+        <ChoiceBox fx:id="pkAlgorithm" value="rsa" onAction="#saveKeyProperties" layoutX="15.0" layoutY="93.0"
+                   prefHeight="25.0" prefWidth="88.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="rsa"/>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <Label layoutX="15.0" layoutY="124.0" prefHeight="25.0" prefWidth="104.0" text="PK Length"
+               textAlignment="CENTER" textFill="#5f7900a1">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Label>
+        <ChoiceBox fx:id="pkLength" value="2048" onAction="#saveKeyProperties" layoutX="15.0" layoutY="149.0"
+                   prefHeight="25.0" prefWidth="88.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="512"/>
+                    <String fx:value="1028"/>
+                    <String fx:value="2048"/>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <Button layoutX="11.0" layoutY="393.0" mnemonicParsing="false" onAction="#setOutputPath" prefHeight="28.0"
+                prefWidth="196.0" text="Select Output path">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+    </AnchorPane>
+    <fx:include source="admin.fxml"/>
+    <fx:include source="user.fxml"/>
+    <Label fx:id="outputPath" layoutX="223.0" layoutY="391.0" prefHeight="28.0" prefWidth="693.0" textFill="WHITE">
+        <font>
+         <Font size="14.0"/>
+        </font>
+    </Label>
+</AnchorPane>
